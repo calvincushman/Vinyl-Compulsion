@@ -12,7 +12,9 @@ import { BudgetBlackMetalComponent } from './budget-black-metal/budget-black-met
 import { TitleDetailsComponent } from './title-details/title-details.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AdminComponent } from './admin/admin.component';
+import { EditTitleComponent } from './edit-title/edit-title.component'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,7 +30,9 @@ export const firebaseConfig = {
     AboutComponent,
     EventsComponent,
     BudgetBlackMetalComponent,
-    TitleDetailsComponent
+    TitleDetailsComponent,
+    AdminComponent,
+    EditTitleComponent
   ],
   imports: [
     BrowserModule,

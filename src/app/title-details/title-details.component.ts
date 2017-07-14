@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Title } from  '../title.model';
 import { TitleService } from '../title.service';
+import { FirebaseListObservable } from 'angularfire2/database'
 
 @Component({
   selector: 'app-title-details',
@@ -13,8 +14,8 @@ import { TitleService } from '../title.service';
 
 export class TitleDetailsComponent implements OnInit {
 
-  titleId: number;
-  titleToDisplay: Title;
+  titleId: string;
+  titleToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +25,7 @@ export class TitleDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.titleId =parseInt(urlParameters['id']);
+      this.titleId = urlParameters['id'];
     });
     this.titleToDisplay = this.titleService.getTitleById(this.titleId);
   }

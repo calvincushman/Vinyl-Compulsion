@@ -5,7 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
 import { BudgetBlackMetalComponent } from './budget-black-metal/budget-black-metal.component';
 import { TitleDetailsComponent } from './title-details/title-details.component';
-
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes = [
   {
@@ -23,6 +23,10 @@ const appRoutes = [
   {
     path: 'budget-black-metal',
     component: BudgetBlackMetalComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   },
   {
     path: 'titles/:id',

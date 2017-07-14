@@ -1,6 +1,6 @@
 <div>
-  <h3>{{titleToDisplay.artist}}</h3>
-  <h4><em>{{titleToDisplay.title}}</em></h4>
-  <p>{{titleToDisplay.description}}</p>
-  <h5>{{titleToDisplay.formats}}</h5>
-  <h6>{{titleToDisplay.averagePrice}}</h6>
+  <h3>{{titleToDisplay | async}}?.artist</h3>
+  <h4><em>{{titleToDisplay | async}}?.title</em></h4>
+  <p>{{titleToDisplay | async}}?.description</p>
+  <h5>{{titleToDisplay | async}}?.formats</h5>
+  <h6>{{titleToDisplay | async}}?.averagePrice</h6>

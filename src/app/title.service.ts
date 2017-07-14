@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Title } from './title.model';
-import { TITLES } from './mock-titles'
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -16,11 +15,11 @@ export class TitleService {
     return this.titles;
   }
 
-  getTitleById(titleId: number){
-    for (var i = 0; i <= TITLES.length - 1; i++) {
-      if (TITLES[i].id === titleId) {
-        return TITLES[i];
-      }
-    }
+  addTitle(newTitle: Title) {
+    this.titles.push(newTitle)
+  }
+
+  getTitleById(titleId: string){
+    return this.database.object('titles/' + titleId);
   }
 }

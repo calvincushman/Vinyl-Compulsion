@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '../title.model';
 import { Router } from '@angular/router';
 import { TitleService } from '../title.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-budget-black-metal',
@@ -12,7 +13,7 @@ import { TitleService } from '../title.service';
 
 export class BudgetBlackMetalComponent implements OnInit {
 
-  titles: Title[];
+  titles: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private titleService: TitleService) {}
 
@@ -20,8 +21,8 @@ export class BudgetBlackMetalComponent implements OnInit {
     this.titles = this.titleService.getTitles();
   };
 
-  goToDetailPage(clickedTitle: Title) {
-    this.router.navigate(['titles', clickedTitle.id])
+  goToDetailPage(clickedTitle) {
+    this.router.navigate(['titles', clickedTitle.$key])
   };
 
 
