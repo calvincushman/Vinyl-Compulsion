@@ -1,5 +1,5 @@
 <h2>Budget Black Metal</h2>
-<div *ngFor="let title of titles" (click)="goToDetailPage(title)">
+<div *ngFor="let title of titles | async" (click)="goToDetailPage(title)">
   <h3>{{title.artist}}</h3>
   <h4><em>{{title.title}}</em></h4>
 </div>
