@@ -15,6 +15,8 @@ export class BudgetBlackMetalComponent implements OnInit {
 
   titles: FirebaseListObservable<any[]>;
 
+  currentRoute: string = this.router.url;
+
   constructor(private router: Router, private titleService: TitleService) {}
 
   ngOnInit() {
