@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Title } from '../title.model'
+import { TitleService } from '../title.service';
+
 @Component({
   selector: 'app-edit-title',
   templateUrl: './edit-title.component.html',
@@ -8,9 +9,19 @@ import { Title } from '../title.model'
 export class EditTitleComponent implements OnInit {
   @Input() selectedTitle;
 
-  constructor() { }
+  constructor(private titleService: TitleService) { }
 
   ngOnInit() {
+  }
+
+  beginUpdatingTitle(titleToUpdate){
+    this.titleService.updateTitle(titleToUpdate);
+  }
+
+  beginDeletingTitle(titleToDelete){
+    if(confirm("Are you sure that you want to delete this title?")){
+      this.titleService.deleteTitle(titleToDelete);
+    }
   }
 
 }

@@ -22,4 +22,18 @@ export class TitleService {
   getTitleById(titleId: string){
     return this.database.object('titles/' + titleId);
   }
+
+  updateTitle(localUpdatedTitle){
+    var titleEntryInFirebase = this.getTitleById(localUpdatedTitle.$key);
+    titleEntryInFirebase.update({artist: localUpdatedTitle.artist,
+                                  title: localUpdatedTitle.title,
+                                  description: localUpdatedTitle.description,
+                                  formats: localUpdatedTitle.formats,
+                                  averagePrice: localUpdatedTitle.averagePrice});
+  }
+
+  deleteTitle(localTitleToDelete){
+    var titleEntryInFirebase = this.getTitleById(localTitleToDelete.$key);
+    titleEntryInFirebase.remove();
+  }
 }

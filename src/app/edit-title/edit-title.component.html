@@ -17,4 +17,8 @@
 <br>
 
 <label>Average Price</label>
-<input [(ngModel)]="selectedTitle.averagePrice"
+<input [(ngModel)]="selectedTitle.averagePrice">
+
+<button (click)="beginUpdatingTitle(selectedTitle)">Update</button>
+<hr>
+<button (click)="beginDeletingTitle(selectedTitle)">Delete</button>
