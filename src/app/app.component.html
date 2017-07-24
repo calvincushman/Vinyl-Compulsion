@@ -1,17 +1,19 @@
-<h1>
-  {{title}}
-</h1>
-<div id='navigator'>
-  <ul>
-    <li><a routerLink="">Welcome</a></li>
-    <li><a routerLink="about">About</a></li>
-    <li><a routerLink="events">Events</a></li>
-    <li><a routerLink="budget-black-metal">Budget Black Metal</a></li>
-    <li><a routerLink="members">Members</a></li>
-  </ul>
-</div>
-<router-outlet></router-outlet>
+<div class="container">
+  <h1>
+    {{title}}
+  </h1>
+  <div id='navigator'>
+    <ul>
+      <li><a routerLink="">Welcome</a></li>
+      <li><a routerLink="about">About</a></li>
+      <li><a routerLink="events">Events</a></li>
+      <li><a routerLink="budget-black-metal">Budget Black Metal</a></li>
+      <li><a routerLink="members">Members</a></li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
 
-  <div>
+  <div class="adminClick">
     <a routerLink="admin">Admin</a>
   </div>
+</div>
