@@ -1,3 +1,27 @@
+<h3>Add a new member</h3>
+<div>
+  <div>
+    <label>Name</label>
+    <input #newName>
+  </div>
+  <div>
+    <label>Location</label>
+    <input #newLocation>
+  </div>
+  <div>
+    <label>Records</label>
+    <input type="number" #newRecords>
+  </div>
+  <div>
+    <label>Tapes</label>
+    <input type="number" #newTapes>
+  </div>
+  <div>
+    <label>CDs</label>
+    <input type="number" #newCDs>
+  </div>
+  <button (click)="submitMemberForm(newName.value, newLocation.value, newRecords.value, newTapes.value, newCDs.value); newName.value=''; newLocation.value=''; newRecords.value=''; newTapes.value=''; newCDs.value='';">Add</button>
+</div>
 <h3>Add new title to Budget Black Metal</h3>
 <div>
   <div>
@@ -23,3 +47,4 @@
   <button (click)="submitForm(newArtist.value, newTitle.value, newDescription.value, newFormats.value, newPrice.value); newArtist.value=''; newTitle.value=''; newDescription.value=''; newArtist.value=''; newPrice.value='';">Add</button>
 </div>
 <app-budget-black-metal></app-budget-black-metal>
+<app-members></app-members>

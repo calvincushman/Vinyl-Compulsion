@@ -1,0 +1,24 @@
+<h4>Edit Member</h4>
+
+<label>Name:</label>
+<input [(ngModel)]="selectedMember.name">
+<br>
+
+<label>Location:</label>
+<input [(ngModel)]="selectedMember.location">
+<br>
+
+<label>Records:</label>
+<input [(ngModel)]="selectedMember.records">
+<br>
+
+<label>Tapes:</label>
+<input [(ngModel)]="selectedMember.tapes">
+<br>
+
+<label>CDs:</label>
+<input [(ngModel)]="selectedMember.CDs">
+<br>
+
+<button (click)="beginUpdatingMember(selectedMember)">Update</button>
+<button (click)="beginDeletingMember(selectedMember)">Delete</button>

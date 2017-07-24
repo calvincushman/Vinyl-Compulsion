@@ -1,0 +1,8 @@
+<div>
+  <img src="{{(memberToDisplay | async)?.avatar}}">
+  <h3>{{(memberToDisplay | async)?.name}}</h3>
+  <h4>{{(memberToDisplay | async)?.location}}</h4>
+  <h5>Records: {{(memberToDisplay | async)?.records}}</h5>
+  <h5>Tapes: {{(memberToDisplay | async)?.tapes}}</h5>
+  <h5>CDs: {{(memberToDisplay | async)?.CDs}}</h5>
+</div>

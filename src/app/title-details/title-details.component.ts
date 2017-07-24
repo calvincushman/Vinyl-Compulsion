@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Title } from  '../title.model';
 import { TitleService } from '../title.service';
-import { FirebaseListObservable } from 'angularfire2/database'
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-title-details',
@@ -21,7 +21,7 @@ export class TitleDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private titleService: TitleService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {

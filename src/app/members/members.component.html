@@ -1,0 +1,11 @@
+<h2>Members</h2>
+<div *ngFor="let member of members | async">
+  <div (click)="goToInfoPage(member)">
+    <h3>{{member.name}}</h3>
+    <h4>{{member.location}}</h4>
+  </div>
+  <div *ngIf="currentRoute === '/admin'">
+    <hr>
+    <app-edit-members [selectedMember]="member"></app-edit-members>
+  </div>
+</div>

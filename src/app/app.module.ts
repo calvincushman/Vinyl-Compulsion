@@ -14,7 +14,10 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
-import { EditTitleComponent } from './edit-title/edit-title.component'
+import { EditTitleComponent } from './edit-title/edit-title.component';
+import { MembersComponent } from './members/members.component';
+import { EditMembersComponent } from './edit-members/edit-members.component';
+import { MemberInfoComponent } from './member-info/member-info.component'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +35,10 @@ export const firebaseConfig = {
     BudgetBlackMetalComponent,
     TitleDetailsComponent,
     AdminComponent,
-    EditTitleComponent
+    EditTitleComponent,
+    MembersComponent,
+    EditMembersComponent,
+    MemberInfoComponent
   ],
   imports: [
     BrowserModule,
